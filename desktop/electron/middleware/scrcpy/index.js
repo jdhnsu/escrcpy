@@ -144,6 +144,57 @@ async function record(serial, { title, args = '', savePath, ...options } = {}) {
   )
 }
 
+const audioProcesses = new Map()
+
+async function playAudio(serial, { args = '', onExit, ...options } = {}) {
+  if (audioProcesses.has(serial)) {
+    return
+  }
+
+  const audioProcess = createScrcpyProcess(
+    `--serial="${serial}" --no-window --no-video --no-control ${args}`,
+    {
+      resolveOnReady: true,
+      readyErrorMessage: 'scrcpy audio process exited before ready',
+      ...options,
+    },
+  )
+
+  audioProcesses.set(serial, audioProcess)
+
+  audioProcess.once('close', () => {
+    if (audioProcesses.get(serial) === audioProcess) {
+      audioProcesses.delete(serial)
+    }
+    onExit?.(serial)
+  })
+
+  try {
+    await audioProcess
+  }
+  catch (error) {
+    if (audioProcesses.get(serial) === audioProcess) {
+      audioProcesses.delete(serial)
+    }
+    throw error
+  }
+}
+
+async function stopAudio(serial) {
+  const audioProcess = audioProcesses.get(serial)
+
+  if (!audioProcess) {
+    return
+  }
+
+  audioProcesses.delete(serial)
+  await processManager.kill(audioProcess)
+}
+
+function isAudioPlaying(serial) {
+  return audioProcesses.has(serial)
+}
+
 async function helper(
   serial,
   command = '',
@@ -244,6 +295,9 @@ export default {
   getEncoders,
   mirror,
   record,
+  playAudio,
+  stopAudio,
+  isAudioPlaying,
   launch,
   helper,
   getAppList,

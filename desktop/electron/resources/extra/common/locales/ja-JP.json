@@ -453,6 +453,8 @@
   "dependencies.lack.content": "このソフトウェアは {name} に依存しています。指定された依存関係が正しくインストールされていることを確認するか、設定で依存関係の場所を手動で設定してください。",
   "dependencies.lack.title": "お知らせ",
   "desktop.shortcut.add": "デスクトップにショートカットを作成",
+  "device.actions.more.audioPlay.name": "スマホの音声を再生",
+  "device.actions.more.audioStop.name": "音声の再生を停止",
   "device.actions.more.camera.name": "カメラを起動",
   "device.actions.more.custom.name": "開始をカスタマイズ",
   "device.actions.more.mirror.inset": "埋め込みミラー",

@@ -20,7 +20,7 @@
             ...$props,
             ...(item.props || {}),
           }"
-          v-slot="{ loading, trigger }"
+          v-slot="{ loading, trigger, label }"
         >
           <el-dropdown-item :disabled="loading" @click="trigger">
             <template v-if="loading">
@@ -30,7 +30,7 @@
               {{ $t('common.starting') }}
             </template>
             <template v-else>
-              {{ $t(item.label) }}
+              {{ $t(label || item.label) }}
             </template>
           </el-dropdown-item>
         </component>
@@ -42,6 +42,7 @@
 <script setup>
 import Record from './components/record/index.vue'
 import Camera from './components/camera/index.vue'
+import AudioPlay from './components/audio-play/index.vue'
 import Otg from './components/otg/index.vue'
 import Custom from './components/custom/index.vue'
 
@@ -49,6 +50,7 @@ const props = defineProps({
   ...Record.props,
   ...Otg.props,
   ...Camera.props,
+  ...AudioPlay.props,
   ...Custom.props,
 })
 
@@ -71,6 +73,10 @@ const options = computed(() => {
       props: {
         recordType: 'audio',
       },
+    },
+    {
+      label: 'device.actions.more.audioPlay.name',
+      component: AudioPlay,
     },
     {
       label: 'device.actions.more.camera.name',

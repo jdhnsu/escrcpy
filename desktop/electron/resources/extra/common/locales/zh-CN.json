@@ -453,6 +453,8 @@
   "dependencies.lack.content": "此软件依赖于{name}。请确保正确安装了上述依赖项，或手动配置偏好设置中依赖项的位置",
   "dependencies.lack.title": "注意事项",
   "desktop.shortcut.add": "添加到桌面快捷方式",
+  "device.actions.more.audioPlay.name": "播放手机音频",
+  "device.actions.more.audioStop.name": "停止播放音频",
   "device.actions.more.camera.name": "启动相机",
   "device.actions.more.custom.name": "灵活启动",
   "device.actions.more.mirror.inset": "内嵌镜像",

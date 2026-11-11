@@ -453,6 +453,8 @@
   "dependencies.lack.content": "此軟體需要 {name} 來運作。請確保已正確安裝所需的工具，或在偏好設定中手動設定工具的位置。",
   "dependencies.lack.title": "注意事項",
   "desktop.shortcut.add": "加入桌面快捷方式",
+  "device.actions.more.audioPlay.name": "播放手機音訊",
+  "device.actions.more.audioStop.name": "停止播放音訊",
   "device.actions.more.camera.name": "啟動鏡頭",
   "device.actions.more.custom.name": "靈活啟動",
   "device.actions.more.mirror.inset": "內嵌鏡像",

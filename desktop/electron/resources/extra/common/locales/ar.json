@@ -453,6 +453,8 @@
   "dependencies.lack.content": "يعتمد هذا البرنامج على {name}. يرجى التأكد من تثبيت التبعيات المذكورة بشكل صحيح، أو ضبط مكان التبعيات يدويًا في التفضيلات.",
   "dependencies.lack.title": "تنويه",
   "desktop.shortcut.add": "إضافة اختصار على سطح مكتب",
+  "device.actions.more.audioPlay.name": "تشغيل صوت الهاتف",
+  "device.actions.more.audioStop.name": "إيقاف تشغيل الصوت",
   "device.actions.more.camera.name": "تشغيل الكاميرا",
   "device.actions.more.custom.name": "بدء تشغيل مخصص",
   "device.actions.more.mirror.inset": "مرآة مدمجة",

@@ -453,6 +453,8 @@
   "dependencies.lack.content": "Это программное обеспечение зависит от {name}. Пожалуйста, убедитесь, что указанные зависимости правильно установлены, или вручную настройте расположение зависимостей в настройках.",
   "dependencies.lack.title": "Уведомление",
   "desktop.shortcut.add": "Добавить на рабочий стол",
+  "device.actions.more.audioPlay.name": "Воспроизвести звук телефона",
+  "device.actions.more.audioStop.name": "Остановить воспроизведение звука",
   "device.actions.more.camera.name": "Запустить камеры",
   "device.actions.more.custom.name": "Пользовательский запуск",
   "device.actions.more.mirror.inset": "Встроенное зеркало",

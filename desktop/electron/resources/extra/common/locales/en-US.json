@@ -453,6 +453,8 @@
   "dependencies.lack.content": "This software relies on {name}. Please ensure that the mentioned dependencies are correctly installed, or manually configure the location of the dependencies in the preferences.",
   "dependencies.lack.title": "Notice",
   "desktop.shortcut.add": "Add to Desktop Shortcut",
+  "device.actions.more.audioPlay.name": "Play Phone Audio",
+  "device.actions.more.audioStop.name": "Stop Playing Audio",
   "device.actions.more.camera.name": "Startup Camera",
   "device.actions.more.custom.name": "Custom Startup",
   "device.actions.more.mirror.inset": "Embedded mirror",
